@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- this is our beans   -->
+    <!-- Constructer Injection Practice -->
+    <!--
+    <bean class="com.springcore.ConstructorInjection.certi" name="certi1">
+        <constructor-arg value="Java Certication" />
+    </bean>
+    -->
+    <!-- Using C shcema-->
+    <bean class="com.springcore.ConstructorInjection.certi" name="certi1" c:name="Python Certification"/>
+    <bean class="com.springcore.ConstructorInjection.Person" name="person1">
+        <constructor-arg value="Shubham" />
+        <constructor-arg value="12" type="int" />
+        <constructor-arg ref="certi1" />
+    </bean>
+
+    <bean class="com.springcore.ConstructorInjection.addition" name="addition" c:a="12"  c:b="15" />
+
+
+
+
+</beans>
